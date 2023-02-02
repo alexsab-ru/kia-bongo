@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ page.lang | default: site.lang | default: 'ru' }}">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Купить Киа Бонго в Самаре. Покупка Kia Bongo - Kia-Comtrans.ru</title>
-	<meta name="description" content="Покупка Kia Bongo в Самаре. Корейские грузовики Kia для предпринимателей и частных компаний. Проверенные авто с гарантией в Kia-Comtrans.ru Тел: +7 (960) 824-98-66" />
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<meta itemprop="name" content="Kia Bongo">
-	<meta itemprop="description" content="Покупка Kia Bongo в Самаре. Городские грузовики Kia для предпринимателей и частных компаний. Проверенные авто с гарантией в Kia-Comtrans.ru Тел: +7 (960) 824-98-66">
+	<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta property="og:url" content="/" />
-	<meta property="og:title" content="Купить Киа Бонго в Самаре. Покупка Kia Bongo - Kia-Comtrans.ru" />
-	<meta property="og:description" content="Покупка Kia Bongo в Самаре. Корейские грузовики Kia для предпринимателей и частных компаний. Проверенные авто с гарантией в Kia-Comtrans.ru Тел: +7 (960) 824-98-66" />
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="/img/sliders/exterior/1.jpg" />
 
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/scripts.js?01122022" defer></script>
+	<link rel="stylesheet" href="assets/css/styles.min.css">
+	<script src="assets/js/app.min.js" defer></script>
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="/img/logos/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/logos/apple-touch-icon-57x57.png" />
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="banner bg-black text-white min-h-[700px]">
+	<div class="banner bg-black text-white min-h-[700px] pb-14">
 		<div class="relative h-full">
 			<img src="img/decor-line-white.png" class="absolute w-full h-[70px] top-0 left-0 right-0 hidden sm:block" />
 			<img src="img/decor-line-white-mobile.png" class="absolute w-full h-[25px] top-0 left-0 right-0 block sm:hidden" />
