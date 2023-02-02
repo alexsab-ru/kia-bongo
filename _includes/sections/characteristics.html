@@ -100,7 +100,34 @@
 			</div>
 		</div>
 
-		<div class="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 items-start" id="characteristics-block"></div>
+		<div class="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 items-start" id="characteristics-block">
+
+			{% for ch in site.data.characteristic %}
+			<div class="rounded-tl-2xl border border-black mt-5 overflow-hidden text-xs sm:text-base">
+				<div class="characteristics-toggle-btn">
+					<span class="uppercase leading-[1.2] pr-5">{{ch.title}}</span>
+					<button class="w-5 h-5 flex items-center flex-shrink-0">
+						<img src="img/characteristics/icons/plus.svg" class="svg plus" />
+						<img src="img/characteristics/icons/minus.svg" class="svg minus" />
+					</button>
+				</div>
+				<div class="px-2.5 py-2 flex flex-col relative">
+					<button class="characteristics-close-btn w-5 h-5 flex items-center rotate-45 absolute right-2 bottom-2">
+						<img src="img/characteristics/icons/plus.svg" class="svg plus w-full h-full"/>
+					</button>
+					{% for d in ch.data %}
+					<div>
+						{% if d.name %}
+						<p class="font-normal underline">{{ d.name }}</p>
+						{% endif %}
+						<h4 class="">{{ d.descr }}</h4>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 items-start">
 			<a href="./characteristics.pdf" download class="btn bg-black text-white py-4 text-xs sm:text-base mt-5">Скачать PDF</a>

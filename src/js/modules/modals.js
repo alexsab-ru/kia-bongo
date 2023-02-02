@@ -44,8 +44,8 @@ document.querySelectorAll('.modal-overlay').forEach(el => {
 
 function closeModal(modal){
 	if (modal.dataset.type == 'video') {
-		modal.querySelector('iframe').remove();
-		modal.querySelector('.video-wrap').innerHTML = '<div id="player">';
+		if(modal.querySelector('iframe')) modal.querySelector('iframe').remove();
+		if(modal.querySelector('.video-wrap')) modal.querySelector('.video-wrap').innerHTML = '<div id="player">';
 	}
 	modal.classList.add('hidden');
 	const form = modal.querySelector('form');

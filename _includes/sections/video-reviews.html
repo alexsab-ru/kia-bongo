@@ -5,10 +5,26 @@
 		<a class="pt-28" id="video-review"></a>
 		<h2 class="text-h2 inline-block bg-white">Видеообзоры</h2>
 
-		<div class="grid-cols-4 gap-5 xl:gap-8 mt-5 hidden sm:grid" id="video-reviews"></div>
+		<div class="grid-cols-4 gap-5 xl:gap-8 mt-5 hidden sm:grid" id="video-reviews">
+			{% for v in site.data.video %}
+			<div class="{% if forloop.index == 1 or forloop.index == 2 %}col-span-2 {% endif %}modal-video-btn" data-id="{{ v.id }}" title="{{ v.title }}">
+				<h3 class="uppercase whitespace-nowrap truncate mb-2 xl:mb-4 text-xs lg:text-base">{{ v.title }}</h3>
+				<div class="pb-[56.25%] border border-black rounded-tl-3xl overflow-hidden cursor-pointer bg-cover bg-center transition-all duration-500 hover:-translate-x-2" style="background-image: url('https://img.youtube.com/vi/{{v.id}}/{{v.thumb}}.jpg');"></div>
+			</div>
+			{% endfor %}
+		</div>
 
 		<div class="swiper video-slider mt-5 hidden" id="video-slider">
-			<div class="swiper-wrapper"></div>
+			<div class="swiper-wrapper">
+				{% for v in site.data.video %}
+				<div class="swiper-slide">
+					<div class="modal-video-btn" data-id="{{ v.id }}" title="{{ v.title }}">
+						<div class="pb-[56.25%] border border-black rounded-tl-3xl overflow-hidden cursor-pointer bg-cover bg-center" style="background-image: url('https://img.youtube.com/vi/{{v.id}}/{{v.thumb}}.jpg');"></div>
+						<h3 class="text-center text-xs uppercase mt-4 px-12 line-clamp-2">{{ v.title }}</h3>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
 			<div class="flex justify-between absolute w-full bottom-0 z-[1]">
 				<div class="swiper-video-button-prev w-8 h-10 bg-white flex items-center">
 					<img src="img/icons/left.svg" />

@@ -1,4 +1,4 @@
-const charData = require('./characteristicsData.js')
+window.charData = require('./characteristicsData.js')
 function strOutput(arr){
 	let str = '';
 	arr.forEach((el, idx) => {
@@ -21,8 +21,8 @@ if(charData.length){
 					<div class="characteristics-toggle-btn">
 						<span class="uppercase leading-[1.2] pr-5">${ch.title}</span>
 						<button class="w-5 h-5 flex items-center flex-shrink-0">
-							<img src="img/characteristics/icons/plus.svg" class="svg plus" />							
-							<img src="img/characteristics/icons/minus.svg" class="svg minus" />							
+							<img src="img/characteristics/icons/plus.svg" class="svg plus" />
+							<img src="img/characteristics/icons/minus.svg" class="svg minus" />
 						</button>
 					</div>
 					<div class="px-2.5 py-2 flex flex-col relative">
