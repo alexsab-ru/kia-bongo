@@ -1,0 +1,24 @@
+<section class="relative z-[1] pt-[40px] md:pt-[100px]">
+	<img src="img/decor-line-black.png" class="absolute w-full h-[50px] top-[140px] left-0 right-0 hidden md:block z-[-1]" />
+	<img src="img/decor-line-black.png" class="absolute w-full h-[25px] top-[60px] left-0 right-0 block md:hidden z-[-1]" />
+	<div class="container">
+		<a class="pt-28" id="video-review"></a>
+		<h2 class="text-h2 inline-block bg-white">Видеообзоры</h2>
+
+		<div class="grid-cols-4 gap-5 xl:gap-8 mt-5 hidden sm:grid" id="video-reviews"></div>
+
+		<div class="swiper video-slider mt-5 hidden" id="video-slider">
+			<div class="swiper-wrapper"></div>
+			<div class="flex justify-between absolute w-full bottom-0 z-[1]">
+				<div class="swiper-video-button-prev w-8 h-10 bg-white flex items-center">
+					<img src="img/icons/left.svg" />
+				</div>
+				<div class="swiper-video-button-next w-8 h-10 bg-white flex items-center">
+					<img src="img/icons/right.svg" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{%- include modals/video-modal.html -%}
+</section>

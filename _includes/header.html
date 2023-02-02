@@ -1,0 +1,13 @@
+<header class="bg-black text-white">
+	<div class="container">
+		<div class="flex py-7 lg:py-0 items-start md:items-center justify-between gap-x-10">
+			<nav class="flex flex-col sm:flex-row sm:justify-between flex-grow flex-wrap gap-7 text-xs lg:text-base">
+				<a href="#specifications" class="uppercase whitespace-nowrap md:py-1 lg:py-10 font-bold">Характеристики</a>
+				<a href="#complectation" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Комплектация</a>
+				<a href="#common-modal" class="popup-link font-normal uppercase whitespace-nowrap md:py-1 lg:py-10 order-last md:order-none" data-caption="Записаться на тест-драйв" data-form="Запись на тест-драйв">Записаться на тест-драйв</a>
+				<a href="#owners" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Владельцам</a>
+			</nav>
+			<a href="tel:{% include utils/phonef.html phone=site.phone %}" class="absolute top-5 right-4 sm:relative sm:top-0 sm:right-0 bg-white text-xs lg:text-base text-black whitespace-nowrap py-2 px-2.5 rounded-tl-2xl transition-all hover:rounded-br-2xl">{{ site.phone }}</a>
+		</div>
+	</div>
+</header>

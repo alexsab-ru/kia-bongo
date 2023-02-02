@@ -1,0 +1,32 @@
+<footer class="relative z-[1] text-white">
+	<img src="img/footer-bg.png" class="absolute w-full h-full left-0 top-0 z-[-1] object-cover object-left-top hidden sm:block" />
+	<img src="img/footer-bg-mobile.png" class="absolute w-full h-full left-0 top-0 z-[-1] object-cover object-left-top block sm:hidden" />
+	<div class="container">
+		<div class="flex flex-col justify-between py-16 md:py-24">
+			<div class="w-full md:w-2/3 lg:w-1/2 mb-12">
+				<div class="flex flex-wrap gap-y-4">
+					<!-- <a href="#" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Компания</a> -->
+					<!-- <a class="hidden sm:block w-1/2"></a> -->
+					<a href="#specifications" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Xарактеристики</a>
+					<a href="#complectation" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Комплектации</a>
+					<a href="#exterior" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Экстерьер</a>
+					<a href="#video-review" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Видеообзоры</a>
+					<a href="#interior" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Интерьер</a>
+					<a href="#owners" class="w-full sm:w-1/2 uppercase font-light transition-all hover:font-bold text-base sm:text-2xl">Владельцам</a>
+				</div>
+			</div>
+			<div class="flex items-end md:items-center flex-col md:flex-row justify-between">
+				<a href="tel:{% include utils/phonef.html phone=site.phone %}" class="font-light text-xl md:text-3xl mb-5 md:mb-0">{{ site.phone }}</a>
+				<div class="flex items-center gap-x-8 md:gap-x-8">
+
+					{% for soc in site.data.socials %}
+					<a href="{{ soc.url }}" class="w-12 h-12 p-2 md:p-0 md:w-16 md:h-16 border border-white rounded-tl-lg md:rounded-tl-xl fill-white flex items-center justify-center transition-colors hover:fill-black hover:bg-white lg:hover:rounded-br-xl" target="_blank">
+						<img src="{{ soc.icon | relative_url }}" alt="{{ soc.name }}" class="svg transition-all">
+					</a>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

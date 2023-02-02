@@ -1,0 +1,12 @@
+- name: Youtube
+  url: #
+  icon: img/icons/youtube2.svg
+- name: Instagram
+  url: #
+  icon: img/icons/insta.svg
+- name: Вконтакте
+  url: #
+  icon: img/icons/vk.svg
+- name: Одноклассники
+  url: #
+  icon: img/icons/ok.svg

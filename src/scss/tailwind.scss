@@ -12,11 +12,11 @@
   }
   input[type="text"],
   input[type="email"],
-  input[type="tel"], {
+  input[type="tel"] {
     @apply text-center text-black uppercase p-3 rounded-tl-2xl transition-all focus:rounded-br-2xl placeholder-[#b5b7bb] outline-0;
   }
   .btn {
-    @apply text-center text-black bg-white uppercase p-2.5 rounded-tl-2xl transition-all hover:rounded-br-2xl;
+    @apply text-center text-black bg-white uppercase p-2.5 rounded-tl-2xl transition-all hover:rounded-br-2xl cursor-pointer;
     &.btn-o {
       @apply text-white bg-transparent border-2 hover:bg-white hover:text-black;
     }

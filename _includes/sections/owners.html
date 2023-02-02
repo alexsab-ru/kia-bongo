@@ -1,0 +1,24 @@
+<section class="relative z-[1] py-[40px] md:py-[100px]">
+	<img src="img/decor-line-black.png" class="absolute w-full h-[50px] top-[140px] left-0 right-0 hidden md:block z-[-1]" />
+	<img src="img/decor-line-black.png" class="absolute w-full h-[25px] top-[60px] left-0 right-0 block md:hidden z-[-1]" />
+	<div class="container relative z-[1] overflow-hidden sm:overflow-visible">
+		<a class="pt-28" id="owners"></a>
+		<h2 class="text-h2 inline-block bg-white mb-5 sm:mb-16">Владельцам</h2>
+
+		<img src="img/wheel-bg.png" class="absolute w-[55%] sm:w-[40%] -right-6 sm:right-0 top-1 sm:-top-2 opacity-20 lg:opacity-100" />
+
+		<div class="w-full lg:w-1/2">
+			{% for item in site.data.owners %}
+			<div class="accordion-item relative">
+				{% if item.modal %}
+				<a href="{{ item.modal.href }}" class="popup-link text-xl sm:text-4xl font-light pr-4 py-1 inline-block rounded-tl-2xl cursor-pointer transition-all hover:translate-x-4" data-caption="{{ item.modal.data-caption }}" data-form="{{ item.modal.data-form }}">{{item.title}}</a>
+				{% else %}
+				<h3 class="text-xl sm:text-4xl font-light pr-4 py-1 inline-block rounded-tl-2xl cursor-pointer transition-all hover:translate-x-4">{{item.title}}</h3>
+				{% endif %}
+				<p class="mt-2 mb-3 font-light text-base sm:text-xl transition-all opacity-0 invisible h-0 -traslate-y-3">{{item.descr}}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+	</div>
+</section>
