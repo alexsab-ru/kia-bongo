@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-permalink: /blog/:title/
+permalink: /blog/:categories/:title/
+category: test
 ---
 
 **Hello world**, this is my first Jekyll blog post.
