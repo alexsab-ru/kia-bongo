@@ -2,7 +2,10 @@
 	<div class="container">
 		<div class="flex py-7 lg:py-0 items-start md:items-center justify-between gap-x-10">
 			<nav class="flex flex-col sm:flex-row sm:justify-between flex-grow flex-wrap gap-7 text-xs lg:text-base">
-				<a href="#specifications" class="uppercase whitespace-nowrap md:py-1 lg:py-10 font-bold">Характеристики</a>
+				{% if page.url != '/' %}
+				<a href="/" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Главная</a>
+				{% endif %}
+				<a href="#specifications" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Характеристики</a>
 				<a href="#complectation" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Комплектация</a>
 				<a href="#common-modal" class="popup-link font-normal uppercase whitespace-nowrap md:py-1 lg:py-10 order-last md:order-none" data-caption="Записаться на тест-драйв" data-form="Запись на тест-драйв">Записаться на тест-драйв</a>
 				<a href="#owners" class="font-normal uppercase whitespace-nowrap md:py-1 lg:py-10">Владельцам</a>
