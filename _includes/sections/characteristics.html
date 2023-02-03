@@ -105,7 +105,7 @@
 			{% for ch in site.data.characteristic %}
 			<div class="rounded-tl-2xl border border-black mt-5 overflow-hidden text-xs sm:text-base">
 				<div class="characteristics-toggle-btn">
-					<span class="uppercase leading-[1.2] pr-5">{{ch.title}}</span>
+					<span class="uppercase leading-[1.2]">{{ch.title}}</span>
 					<button class="w-5 h-5 flex items-center flex-shrink-0">
 						<img src="img/characteristics/icons/plus.svg" class="svg plus" />
 						<img src="img/characteristics/icons/minus.svg" class="svg minus" />
@@ -118,9 +118,9 @@
 					{% for d in ch.data %}
 					<div>
 						{% if d.name %}
-						<p class="font-normal underline">{{ d.name }}</p>
+						<p class="font-normal underline {% if forloop.length == forloop.index %}pr-6{% endif %}">{{ d.name }}</p>
 						{% endif %}
-						<h4 class="">{{ d.descr }}</h4>
+						<h4 class="{% if forloop.length == forloop.index %}pr-6{% else %}mb-3{% endif %}">{{ d.descr }}</h4>
 					</div>
 					{% endfor %}
 				</div>
