@@ -3,7 +3,7 @@ version: "3"
 services:
   jekyll:
     image: jekyll/jekyll:latest
-    container_name: jekyll_bundle
+    container_name: jekyll_kia_bongo
     command: jekyll serve --trace --watch --force_polling
     ports:
       - 4001:4000
